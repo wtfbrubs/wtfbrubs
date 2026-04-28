@@ -45,6 +45,22 @@ My background spans the full stack: from sysadmin and network foundations to clo
 
 ---
 
+**Featured Project**
+
+**[aws-terraform-template](https://github.com/wtfbrubs/aws-terraform-template)** — Production-ready AWS infrastructure template managed with Terraform. Covers VPC, ECS Fargate, EKS, RDS MySQL, ALB, ACM, Route53, CloudTrail, EFS, S3, Lambda, SES, IAM and more — with GitLab CI and GitHub Actions pipelines including cost estimation via Infracost.
+
+[![Terraform](https://github.com/wtfbrubs/aws-terraform-template/actions/workflows/terraform.yml/badge.svg)](https://github.com/wtfbrubs/aws-terraform-template/actions/workflows/terraform.yml)
+![Terraform](https://img.shields.io/badge/Terraform-%3E%3D1.9-623CE4?style=flat&logo=terraform&logoColor=white)
+![AWS Provider](https://img.shields.io/badge/AWS_Provider-~%3E5.0-FF9900?style=flat&logo=amazonaws&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/EKS-1.35-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![Region](https://img.shields.io/badge/Region-sa--east--1-232F3E?style=flat&logo=amazonaws&logoColor=white)
+
+Modules: `vpc` · `ec2` · `ec2-crons` · `ecs` · `ecs-service` · `eks` · `rds` · `alb` · `acm` · `route53` · `s3` · `efs` · `lambda` · `cloudtrail` · `dlm` · `ses` · `codecommit-repo` · `iam`
+
+Security highlights: secrets via Secrets Manager · IRSA (OIDC) on EKS · KMS encryption at rest · RDS password rotation · `deletion_protection` on audit buckets
+
+---
+
 **Highlights**
 
 - Led full cloud workload migration BR → US with minimal downtime
