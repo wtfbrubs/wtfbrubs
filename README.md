@@ -2,7 +2,7 @@
 
 **Infrastructure Analyst Sr · DevOps · SRE · Platform Engineer**
 
-Multi-cloud engineer with 6+ years in IT, specializing in cloud infrastructure, reliability engineering and platform automation. Currently at **KMM by nstech** — AWS Partner — operating critical workloads across AWS, Azure, OCI and GCP. Delivered an **AWS Service Delivery Program (SDP)** for MySQL RDS.
+Multi-cloud engineer with 15+ years in IT, specializing in cloud infrastructure, reliability engineering and platform automation. Currently at **KMM by nstech** — AWS Partner — operating critical workloads across AWS, Azure, OCI and GCP. Delivered an **AWS Service Delivery Program (SDP)** for MySQL RDS.
 
 My background spans the full infrastructure stack: from sysadmin and network foundations to cloud architecture, Kubernetes platforms, FinOps governance and incident response in war rooms.
 
