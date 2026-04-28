@@ -1,10 +1,10 @@
-### Hey, I'm Bruno 👋
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1000&color=58A6FF&width=500&lines=Hey%2C+I'm+Bruno+%F0%9F%91%8B;Infrastructure+%7C+DevOps+%7C+SRE;15%2B+years+building+at+scale;Multi-cloud+%7C+Kubernetes+%7C+FinOps)](https://git.io/typing-svg)
 
 **Infrastructure Analyst Sr · DevOps · SRE · Platform Engineer**
 
 Multi-cloud engineer with 15+ years in IT, specializing in cloud infrastructure, reliability engineering and platform automation. Currently at **KMM by nstech** — AWS Partner — operating critical workloads across AWS, Azure, OCI and GCP. Delivered an **AWS Service Delivery Program (SDP)** for MySQL RDS.
 
-My background spans the full infrastructure stack: from sysadmin and network foundations to cloud architecture, Kubernetes platforms, FinOps governance and incident response in war rooms.
+My background spans the full stack: from sysadmin and network foundations to cloud architecture, Kubernetes platforms, FinOps governance and incident response in war rooms. What I enjoy most is turning complex infrastructure problems into clean, automated solutions 🚀
 
 ---
 
@@ -66,4 +66,17 @@ My background spans the full infrastructure stack: from sysadmin and network fou
 
 ---
 
-<sub>📍 Ponta Grossa, PR — Brazil</sub>
+<div align="center">
+
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=wtfbrubs&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117)](https://github.com/wtfbrubs)
+[![GitHub Streak](https://streak-stats.demolab.com?user=wtfbrubs&theme=github-dark-blue&hide_border=true&background=0d1117)](https://git.io/streak-stats)
+
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=wtfbrubs&theme=github-compact&hide_border=true&bg_color=0d1117&color=58A6FF&line=58A6FF&point=ffffff)](https://github.com/wtfbrubs)
+
+![snake](https://raw.githubusercontent.com/wtfbrubs/wtfbrubs/output/github-contribution-grid-snake-dark.svg)
+
+![Profile views](https://komarev.com/ghpvc/?username=wtfbrubs&style=flat&color=58A6FF)
+
+**[LinkedIn](https://www.linkedin.com/in/brunodelima1/)** · 📍 Ponta Grossa, PR — Brazil
+
+</div>
