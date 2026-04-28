@@ -69,7 +69,11 @@ My background spans the full stack: from sysadmin and network foundations to clo
 <div align="center">
 
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=wtfbrubs&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117)](https://github.com/wtfbrubs)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=wtfbrubs&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117)](https://github.com/wtfbrubs)
+
 [![GitHub Streak](https://streak-stats.demolab.com?user=wtfbrubs&theme=github-dark-blue&hide_border=true&background=0d1117)](https://git.io/streak-stats)
+
+[![Trophy](https://github-profile-trophy.vercel.app/?username=wtfbrubs&theme=gitdimmed&no-frame=true&row=1&column=7)](https://github.com/wtfbrubs)
 
 [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=wtfbrubs&theme=github-compact&hide_border=true&bg_color=0d1117&color=58A6FF&line=58A6FF&point=ffffff)](https://github.com/wtfbrubs)
 
