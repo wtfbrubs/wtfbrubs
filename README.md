@@ -1,4 +1,4 @@
-**Bruno de Lima** · Infrastructure & DevOps · 15+ years building at scale · Multi-cloud | Kubernetes | FinOps | AWS | Azure | GCP | OCI
+<b>Bruno de Lima</b> <img src="cursor.svg" height="16" alt="|"/> · Infrastructure & DevOps · 15+ years building at scale · Multi-cloud | Kubernetes | FinOps | AWS | Azure | GCP | OCI
 
 <img src="dashboard.svg" width="100%" alt="wtfbrubs — infra & devops overview"/>
 
