@@ -1,4 +1,4 @@
-<img src="header.svg" width="100%" alt="Bruno de Lima | Infrastructure &amp; DevOps"/>
+<img src="header-v2.svg" width="100%" alt="Bruno de Lima | DevOps Engineer · Platform Engineer &amp; SRE"/>
 
 <img src="dashboard.svg" width="100%" alt="wtfbrubs — infra & devops overview"/>
 
