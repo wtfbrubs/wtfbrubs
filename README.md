@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&weight=600&pause=1000&color=00FF6A&width=600&lines=Bruno+de+Lima+%7C+Infrastructure+%26+DevOps;15%2B+years+building+at+scale;Multi-cloud+%7C+Kubernetes+%7C+FinOps;AWS+%7C+Azure+%7C+GCP+%7C+OCI)](https://git.io/typing-svg)
+**Bruno de Lima** · Infrastructure & DevOps · 15+ years building at scale · Multi-cloud | Kubernetes | FinOps | AWS | Azure | GCP | OCI
 
 <img src="dashboard.svg" width="100%" alt="wtfbrubs — infra & devops overview"/>
 
