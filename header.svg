@@ -1,18 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 88">
-  <text x="2" y="46"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 96">
+  <text x="2" y="52"
         font-family="'IBM Plex Mono', 'Courier New', monospace"
-        font-size="38"
+        font-size="48"
         font-weight="700"
+        letter-spacing="1"
         fill="#00FF6A"
-        textLength="295"
+        textLength="360"
         lengthAdjust="spacingAndGlyphs">Bruno de Lima</text>
 
-  <rect x="300" y="11" width="15" height="38" fill="#00FF6A">
+  <rect x="365" y="12" width="18" height="44" fill="#00FF6A">
     <animate attributeName="opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/>
   </rect>
 
-  <text x="2" y="76"
+  <text x="2" y="82"
         font-family="'IBM Plex Mono', 'Courier New', monospace"
-        font-size="13"
-        fill="#ffffff">Infrastructure &amp; DevOps · 15+ years building at scale · Multi-cloud | Kubernetes | FinOps | AWS | Azure | GCP | OCI</text>
+        font-size="14"
+        letter-spacing="0.5"
+        fill="#7A808A">DevOps Engineer · Platform Engineer &amp; SRE</text>
 </svg>
