@@ -1,280 +1,246 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380" style="font-family:'IBM Plex Mono','Courier New',monospace">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" style="font-family:'IBM Plex Mono','Courier New',monospace">
   <defs>
-    <pattern id="dot-grid" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="0.8" fill="rgba(255,255,255,0.055)"/>
+    <pattern id="dot" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.75" fill="rgba(255,255,255,0.04)"/>
     </pattern>
-    <clipPath id="round"><rect width="800" height="380" rx="8"/></clipPath>
-    <linearGradient id="bar-green" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="g-green" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#00FF6A"/>
       <stop offset="100%" stop-color="#00CC55"/>
     </linearGradient>
-    <linearGradient id="bar-yellow" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="g-yellow" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#F5C400"/>
       <stop offset="100%" stop-color="#D4A800"/>
     </linearGradient>
-    <linearGradient id="bar-blue" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="g-blue" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#58A6FF"/>
       <stop offset="100%" stop-color="#3B82F6"/>
     </linearGradient>
+    <linearGradient id="g-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00FF6A" stop-opacity="0.5"/>
+      <stop offset="30%" stop-color="#00FF6A" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#58A6FF" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0.5"/>
+    </linearGradient>
+    <clipPath id="clip"><rect width="900" height="420" rx="10"/></clipPath>
   </defs>
 
-  <!-- Base -->
-  <rect width="800" height="380" rx="8" fill="#111214" clip-path="url(#round)"/>
-  <rect width="800" height="380" fill="url(#dot-grid)" clip-path="url(#round)"/>
-  <rect width="800" height="380" rx="8" fill="none" stroke="#1E2124" stroke-width="1"/>
+  <!-- Background -->
+  <rect width="900" height="420" rx="10" fill="#0D0F12" clip-path="url(#clip)"/>
+  <rect width="900" height="420" fill="url(#dot)" clip-path="url(#clip)"/>
 
-  <!-- Dashboard header bar -->
-  <rect x="0" y="0" width="800" height="38" rx="8" fill="#141618"/>
-  <rect x="0" y="30" width="800" height="8" fill="#141618"/>
-  <rect x="0" y="37" width="800" height="1" fill="#1E2124"/>
+  <!-- Top glow accent line -->
+  <rect width="900" height="1.5" fill="url(#g-top)" clip-path="url(#clip)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+  </rect>
 
-  <!-- Live dot -->
-  <circle cx="20" cy="19" r="4" fill="#00FF6A">
-    <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
+  <!-- Border -->
+  <rect width="900" height="420" rx="10" fill="none" stroke="#1E2124" stroke-width="1"/>
+
+  <!-- Header bar -->
+  <rect width="900" height="42" rx="10" fill="#141618"/>
+  <rect y="34" width="900" height="8" fill="#141618"/>
+  <rect y="41" width="900" height="1" fill="#252830"/>
+
+  <!-- Live dot with pulse ring -->
+  <circle cx="20" cy="21" r="6" fill="#00FF6A" opacity="0.1">
+    <animate attributeName="r" values="4;9;4" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.15;0;0.15" dur="2s" repeatCount="indefinite"/>
   </circle>
-  <text x="30" y="23" font-size="9" fill="#00FF6A" font-weight="600" letter-spacing="0.08em">LIVE</text>
+  <circle cx="20" cy="21" r="3.5" fill="#00FF6A">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="30" y="25" font-size="7.5" fill="#00FF6A" font-weight="700" letter-spacing="0.12em">LIVE</text>
 
-  <!-- Title -->
-  <text x="60" y="23" font-size="10" fill="#7A808A" letter-spacing="0.04em">wtfbrubs — infra &amp; devops · overview</text>
+  <!-- Header title -->
+  <text x="62" y="25" font-size="9" fill="#C8CDD5" letter-spacing="0.03em">Bruno de Lima</text>
+  <text x="184" y="25" font-size="9" fill="#5A6072" letter-spacing="0.02em">· Cloud &amp; DevOps Engineer · Multi-cloud Platform</text>
 
-  <!-- Window dots -->
-  <circle cx="754" cy="19" r="5" fill="#FF5F57"/>
-  <circle cx="770" cy="19" r="5" fill="#FEBC2E"/>
-  <circle cx="786" cy="19" r="5" fill="#28C840"/>
+  <!-- Window controls -->
+  <circle cx="852" cy="21" r="5" fill="#FF5F57"/>
+  <circle cx="868" cy="21" r="5" fill="#FEBC2E"/>
+  <circle cx="884" cy="21" r="5" fill="#28C840"/>
 
-  <!-- ═══ LEFT COLUMN ═══ -->
+  <!-- Column separator -->
+  <rect x="444" y="52" width="1" height="356" fill="#252830"/>
 
-  <!-- Section label: Stack -->
-  <text x="20" y="65" font-size="9" fill="#7A808A" letter-spacing="0.08em">// stack multi-cloud</text>
+  <!-- ════════════════ LEFT COLUMN ════════════════ -->
 
-  <!-- Tech tags card -->
-  <rect x="20" y="72" width="370" height="62" rx="4" fill="#141618" stroke="#1E2124" stroke-width="1"/>
+  <text x="20" y="67" font-size="7.5" fill="#3D4555" letter-spacing="0.1em">// métricas</text>
 
-  <!-- AWS tag -->
-  <rect x="32" y="84" width="36" height="16" rx="2" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="50" y="95" font-size="8" fill="#FF9900" text-anchor="middle" letter-spacing="0.04em">AWS</text>
+  <!-- Stat card: 14+ YRS -->
+  <rect x="20" y="74" width="195" height="74" rx="5" fill="#141618" stroke="#252830" stroke-width="1"/>
+  <rect x="20" y="74" width="195" height="2.5" rx="1.25" fill="url(#g-green)"/>
+  <text x="117" y="108" font-size="30" fill="#00FF6A" font-weight="700" text-anchor="middle" letter-spacing="-0.03em">14+</text>
+  <text x="117" y="124" font-size="7" fill="#5A6072" text-anchor="middle" letter-spacing="0.1em">ANOS EM TI</text>
+  <text x="117" y="142" font-size="6.5" fill="#2E3340" text-anchor="middle" letter-spacing="0.05em">experience</text>
 
-  <!-- Azure tag -->
-  <rect x="74" y="84" width="40" height="16" rx="2" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="94" y="95" font-size="8" fill="#0078D4" text-anchor="middle" letter-spacing="0.04em">Azure</text>
+  <!-- Stat card: 70+ PROJECTS -->
+  <rect x="225" y="74" width="195" height="74" rx="5" fill="#141618" stroke="#252830" stroke-width="1"/>
+  <rect x="225" y="74" width="195" height="2.5" rx="1.25" fill="url(#g-yellow)"/>
+  <text x="322" y="108" font-size="30" fill="#F5C400" font-weight="700" text-anchor="middle" letter-spacing="-0.03em">70+</text>
+  <text x="322" y="124" font-size="7" fill="#5A6072" text-anchor="middle" letter-spacing="0.1em">PROJETOS</text>
+  <text x="322" y="142" font-size="6.5" fill="#2E3340" text-anchor="middle" letter-spacing="0.05em">delivered</text>
 
-  <!-- GCP tag -->
-  <rect x="120" y="84" width="36" height="16" rx="2" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="138" y="95" font-size="8" fill="#4285F4" text-anchor="middle" letter-spacing="0.04em">GCP</text>
+  <!-- Stat card: 4 CLOUDS -->
+  <rect x="20" y="156" width="195" height="74" rx="5" fill="#141618" stroke="#252830" stroke-width="1"/>
+  <rect x="20" y="156" width="195" height="2.5" rx="1.25" fill="url(#g-blue)"/>
+  <text x="117" y="190" font-size="30" fill="#58A6FF" font-weight="700" text-anchor="middle" letter-spacing="-0.03em">4</text>
+  <text x="117" y="206" font-size="7" fill="#5A6072" text-anchor="middle" letter-spacing="0.1em">CLOUDS</text>
+  <text x="117" y="224" font-size="6.5" fill="#2E3340" text-anchor="middle" letter-spacing="0.05em">OCI · AWS · Azure · GCP</text>
 
-  <!-- OCI tag -->
-  <rect x="162" y="84" width="32" height="16" rx="2" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="178" y="95" font-size="8" fill="#F80000" text-anchor="middle" letter-spacing="0.04em">OCI</text>
+  <!-- Stat card: 99.9% SLA -->
+  <rect x="225" y="156" width="195" height="74" rx="5" fill="#141618" stroke="#252830" stroke-width="1"/>
+  <rect x="225" y="156" width="195" height="2.5" rx="1.25" fill="url(#g-green)"/>
+  <text x="322" y="186" font-size="24" fill="#00FF6A" font-weight="700" text-anchor="middle" letter-spacing="-0.02em">99.9%</text>
+  <text x="322" y="203" font-size="7" fill="#5A6072" text-anchor="middle" letter-spacing="0.1em">SLA ALVO</text>
+  <rect x="245" y="214" width="155" height="3" rx="1.5" fill="#1A1D22"/>
+  <rect x="245" y="214" width="154.8" height="3" rx="1.5" fill="url(#g-green)"/>
+  <text x="322" y="228" font-size="6.5" fill="#2E3340" text-anchor="middle" letter-spacing="0.05em">disponibilidade</text>
 
-  <!-- Kubernetes tag -->
-  <rect x="200" y="84" width="70" height="16" rx="2" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="235" y="95" font-size="8" fill="#326CE5" text-anchor="middle" letter-spacing="0.04em">Kubernetes</text>
+  <!-- Highlights -->
+  <text x="20" y="252" font-size="7.5" fill="#3D4555" letter-spacing="0.1em">// highlights</text>
 
-  <!-- Terraform tag -->
-  <rect x="276" y="84" width="58" height="16" rx="2" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="305" y="95" font-size="8" fill="#7B42F6" text-anchor="middle" letter-spacing="0.04em">Terraform</text>
+  <text x="20" y="268" font-size="7.5" fill="#58A6FF">▸</text>
+  <text x="34" y="268" font-size="7.5" fill="#B0B8C8">OKE platform engineering · EKS · AKS · GitOps</text>
 
-  <!-- Row 2 tags -->
-  <rect x="32" y="106" width="42" height="16" rx="2" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="53" y="117" font-size="8" fill="#8A8F96" text-anchor="middle" letter-spacing="0.04em">CI/CD</text>
+  <text x="20" y="284" font-size="7.5" fill="#00FF6A">▸</text>
+  <text x="34" y="284" font-size="7.5" fill="#B0B8C8">FinOps governance · ISO 27001 · RCA ownership</text>
 
-  <rect x="80" y="106" width="48" height="16" rx="2" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="104" y="117" font-size="8" fill="#8A8F96" text-anchor="middle" letter-spacing="0.04em">Ansible</text>
+  <text x="20" y="300" font-size="7.5" fill="#F5C400">▸</text>
+  <text x="34" y="300" font-size="7.5" fill="#B0B8C8">VPN IPSec site-to-site · Keycloak SSO · KMS</text>
 
-  <rect x="134" y="106" width="46" height="16" rx="2" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="157" y="117" font-size="8" fill="#8A8F96" text-anchor="middle" letter-spacing="0.04em">GitOps</text>
+  <text x="20" y="316" font-size="7.5" fill="#58A6FF">▸</text>
+  <text x="34" y="316" font-size="7.5" fill="#B0B8C8">Go + React · consultoria multi-cliente · 24/7 ops</text>
 
-  <rect x="186" y="106" width="46" height="16" rx="2" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="209" y="117" font-size="8" fill="#8A8F96" text-anchor="middle" letter-spacing="0.04em">Docker</text>
+  <!-- Status bar -->
+  <rect x="20" y="336" width="405" height="26" rx="4" fill="#141618" stroke="#252830" stroke-width="1"/>
+  <circle cx="34" cy="349" r="3" fill="#00FF6A">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <text x="44" y="353" font-size="7.5" fill="#5A6072">system online · Ponta Grossa, PR · Brazil</text>
+  <text x="415" y="353" font-size="7" fill="#3D4555" text-anchor="end">github.com/wtfbrubs</text>
 
-  <rect x="238" y="106" width="56" height="16" rx="2" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="266" y="117" font-size="8" fill="#8A8F96" text-anchor="middle" letter-spacing="0.04em">FinOps</text>
+  <!-- ════════════════ RIGHT COLUMN ════════════════ -->
 
-  <!-- Section label: Metrics -->
-  <text x="20" y="154" font-size="9" fill="#7A808A" letter-spacing="0.08em">// métricas</text>
+  <text x="464" y="67" font-size="7.5" fill="#3D4555" letter-spacing="0.1em">// stack</text>
 
-  <!-- Metric card: Experience -->
-  <rect x="20" y="161" width="88" height="72" rx="4" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="30" y="176" font-size="7.5" fill="#7A808A" letter-spacing="0.08em">EXPERIÊNCIA</text>
-  <text x="30" y="200" font-size="24" fill="#00FF6A" font-weight="600">15+</text>
-  <text x="30" y="213" font-size="7.5" fill="#7A808A">anos em cloud</text>
-  <rect x="30" y="222" width="68" height="2" rx="1" fill="#1A1C1F"/>
-  <rect x="30" y="222" width="68" height="2" rx="1" fill="url(#bar-green)"/>
+  <!-- Cloud (y=74) -->
+  <rect x="464" y="74" width="34" height="17" rx="3" fill="#141618" stroke="#F80000" stroke-width="0.75" stroke-opacity="0.65"/>
+  <text x="481" y="85.5" font-size="7.5" fill="#F80000" text-anchor="middle">OCI</text>
 
-  <!-- Metric card: Clouds -->
-  <rect x="114" y="161" width="88" height="72" rx="4" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="124" y="176" font-size="7.5" fill="#7A808A" letter-spacing="0.08em">CLOUDS</text>
-  <text x="124" y="200" font-size="24" fill="#F5C400" font-weight="600">4</text>
-  <text x="124" y="213" font-size="7.5" fill="#7A808A">provedores</text>
-  <rect x="124" y="222" width="68" height="2" rx="1" fill="#1A1C1F"/>
-  <rect x="124" y="222" width="68" height="2" rx="1" fill="url(#bar-yellow)"/>
+  <rect x="504" y="74" width="36" height="17" rx="3" fill="#141618" stroke="#FF9900" stroke-width="0.75" stroke-opacity="0.65"/>
+  <text x="522" y="85.5" font-size="7.5" fill="#FF9900" text-anchor="middle">AWS</text>
 
-  <!-- Metric card: SLA -->
-  <rect x="208" y="161" width="88" height="72" rx="4" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="218" y="176" font-size="7.5" fill="#7A808A" letter-spacing="0.08em">SLA ALVO</text>
-  <text x="218" y="200" font-size="20" fill="#00FF6A" font-weight="600">99.9%</text>
-  <text x="218" y="213" font-size="7.5" fill="#7A808A">disponibilidade</text>
-  <rect x="218" y="222" width="68" height="2" rx="1" fill="#1A1C1F"/>
-  <rect x="218" y="222" width="67.3" height="2" rx="1" fill="url(#bar-green)"/>
+  <rect x="546" y="74" width="44" height="17" rx="3" fill="#141618" stroke="#0078D4" stroke-width="0.75" stroke-opacity="0.65"/>
+  <text x="568" y="85.5" font-size="7.5" fill="#0078D4" text-anchor="middle">Azure</text>
 
-  <!-- Metric card: AWS SDP -->
-  <rect x="302" y="161" width="88" height="72" rx="4" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="312" y="176" font-size="7.5" fill="#7A808A" letter-spacing="0.08em">AWS SDP</text>
-  <text x="312" y="197" font-size="14" fill="#FF9900" font-weight="600">MySQL</text>
-  <text x="312" y="210" font-size="11" fill="#FF9900" font-weight="600">RDS</text>
-  <text x="312" y="222" font-size="7.5" fill="#7A808A">delivered</text>
-  <rect x="312" y="228" width="68" height="2" rx="1" fill="#1A1C1F"/>
-  <rect x="312" y="228" width="68" height="2" rx="1" fill="url(#bar-yellow)"/>
+  <rect x="596" y="74" width="34" height="17" rx="3" fill="#141618" stroke="#4285F4" stroke-width="0.75" stroke-opacity="0.65"/>
+  <text x="613" y="85.5" font-size="7.5" fill="#4285F4" text-anchor="middle">GCP</text>
 
-  <!-- Section label: Monitor -->
-  <text x="20" y="252" font-size="9" fill="#7A808A" letter-spacing="0.08em">// system monitor</text>
+  <!-- Containers (y=97) -->
+  <rect x="464" y="97" width="68" height="17" rx="3" fill="#141618" stroke="#326CE5" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="498" y="108.5" font-size="7.5" fill="#326CE5" text-anchor="middle">Kubernetes</text>
 
-  <!-- Monitor bar -->
-  <rect x="20" y="259" width="370" height="44" rx="4" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="30" y="272" font-size="7.5" fill="#7A808A">cpu · network · memory</text>
-  <text x="350" y="272" font-size="7" fill="#00FF6A" text-anchor="end">● active</text>
+  <rect x="538" y="97" width="46" height="17" rx="3" fill="#141618" stroke="#2496ED" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="561" y="108.5" font-size="7.5" fill="#2496ED" text-anchor="middle">Docker</text>
 
-  <!-- Fake sparkline bars -->
-  <rect x="30" y="278" width="3" height="16" rx="1" fill="#00FF6A" opacity="0.6"/>
-  <rect x="35" y="283" width="3" height="11" rx="1" fill="#00FF6A" opacity="0.5"/>
-  <rect x="40" y="275" width="3" height="19" rx="1" fill="#00FF6A" opacity="0.7"/>
-  <rect x="45" y="280" width="3" height="14" rx="1" fill="#00FF6A" opacity="0.5"/>
-  <rect x="50" y="278" width="3" height="16" rx="1" fill="#58A6FF" opacity="0.6"/>
-  <rect x="55" y="285" width="3" height="9" rx="1" fill="#58A6FF" opacity="0.4"/>
-  <rect x="60" y="276" width="3" height="18" rx="1" fill="#58A6FF" opacity="0.7"/>
-  <rect x="65" y="281" width="3" height="13" rx="1" fill="#58A6FF" opacity="0.5"/>
-  <rect x="70" y="279" width="3" height="15" rx="1" fill="#F5C400" opacity="0.5"/>
-  <rect x="75" y="284" width="3" height="10" rx="1" fill="#F5C400" opacity="0.4"/>
-  <rect x="80" y="277" width="3" height="17" rx="1" fill="#00FF6A" opacity="0.6"/>
-  <rect x="85" y="282" width="3" height="12" rx="1" fill="#00FF6A" opacity="0.5"/>
-  <rect x="90" y="274" width="3" height="20" rx="1" fill="#00FF6A" opacity="0.8"/>
-  <rect x="95" y="280" width="3" height="14" rx="1" fill="#58A6FF" opacity="0.6"/>
-  <rect x="100" y="278" width="3" height="16" rx="1" fill="#58A6FF" opacity="0.5"/>
-  <rect x="105" y="285" width="3" height="9" rx="1" fill="#58A6FF" opacity="0.4"/>
-  <rect x="110" y="275" width="3" height="19" rx="1" fill="#F5C400" opacity="0.6"/>
-  <rect x="115" y="281" width="3" height="13" rx="1" fill="#F5C400" opacity="0.5"/>
-  <rect x="120" y="279" width="3" height="15" rx="1" fill="#00FF6A" opacity="0.6"/>
-  <rect x="125" y="283" width="3" height="11" rx="1" fill="#00FF6A" opacity="0.5"/>
-  <rect x="130" y="276" width="3" height="18" rx="1" fill="#00FF6A" opacity="0.7"/>
-  <rect x="135" y="280" width="3" height="14" rx="1" fill="#58A6FF" opacity="0.6"/>
-  <rect x="140" y="274" width="3" height="20" rx="1" fill="#58A6FF" opacity="0.7"/>
-  <rect x="145" y="282" width="3" height="12" rx="1" fill="#58A6FF" opacity="0.5"/>
-  <rect x="150" y="278" width="3" height="16" rx="1" fill="#F5C400" opacity="0.5"/>
-  <rect x="155" y="284" width="3" height="10" rx="1" fill="#F5C400" opacity="0.4"/>
-  <rect x="160" y="277" width="3" height="17" rx="1" fill="#00FF6A" opacity="0.6"/>
-  <rect x="165" y="280" width="3" height="14" rx="1" fill="#00FF6A" opacity="0.6"/>
-  <rect x="170" y="275" width="3" height="19" rx="1" fill="#00FF6A" opacity="0.7"/>
-  <rect x="175" y="283" width="3" height="11" rx="1" fill="#58A6FF" opacity="0.5"/>
-  <rect x="180" y="278" width="3" height="16" rx="1" fill="#58A6FF" opacity="0.6"/>
-  <rect x="185" y="285" width="3" height="9" rx="1" fill="#F5C400" opacity="0.4"/>
-  <rect x="190" y="276" width="3" height="18" rx="1" fill="#F5C400" opacity="0.6"/>
-  <rect x="195" y="281" width="3" height="13" rx="1" fill="#00FF6A" opacity="0.5"/>
-  <rect x="200" y="279" width="3" height="15" rx="1" fill="#00FF6A" opacity="0.6"/>
-  <rect x="205" y="274" width="3" height="20" rx="1" fill="#00FF6A" opacity="0.8"/>
-  <rect x="210" y="283" width="3" height="11" rx="1" fill="#58A6FF" opacity="0.5"/>
-  <rect x="215" y="278" width="3" height="16" rx="1" fill="#58A6FF" opacity="0.6"/>
-  <rect x="220" y="280" width="3" height="14" rx="1" fill="#F5C400" opacity="0.5"/>
-  <rect x="225" y="275" width="3" height="19" rx="1" fill="#F5C400" opacity="0.6"/>
-  <rect x="230" y="282" width="3" height="12" rx="1" fill="#00FF6A" opacity="0.5"/>
-  <rect x="235" y="277" width="3" height="17" rx="1" fill="#00FF6A" opacity="0.7"/>
-  <rect x="240" y="279" width="3" height="15" rx="1" fill="#58A6FF" opacity="0.6"/>
-  <rect x="245" y="284" width="3" height="10" rx="1" fill="#58A6FF" opacity="0.4"/>
-  <rect x="250" y="276" width="3" height="18" rx="1" fill="#00FF6A" opacity="0.7"/>
-  <rect x="255" y="280" width="3" height="14" rx="1" fill="#00FF6A" opacity="0.6"/>
-  <rect x="260" y="278" width="3" height="16" rx="1" fill="#F5C400" opacity="0.5"/>
-  <rect x="265" y="283" width="3" height="11" rx="1" fill="#F5C400" opacity="0.4"/>
-  <rect x="270" y="275" width="3" height="19" rx="1" fill="#58A6FF" opacity="0.7"/>
-  <rect x="275" y="281" width="3" height="13" rx="1" fill="#58A6FF" opacity="0.5"/>
-  <rect x="280" y="279" width="3" height="15" rx="1" fill="#00FF6A" opacity="0.6"/>
-  <rect x="285" y="274" width="3" height="20" rx="1" fill="#00FF6A" opacity="0.8"/>
-  <rect x="290" y="282" width="3" height="12" rx="1" fill="#00FF6A" opacity="0.5"/>
-  <rect x="295" y="277" width="3" height="17" rx="1" fill="#58A6FF" opacity="0.6"/>
-  <rect x="300" y="280" width="3" height="14" rx="1" fill="#58A6FF" opacity="0.5"/>
-  <rect x="305" y="275" width="3" height="19" rx="1" fill="#F5C400" opacity="0.6"/>
-  <rect x="310" y="283" width="3" height="11" rx="1" fill="#F5C400" opacity="0.4"/>
-  <rect x="315" y="278" width="3" height="16" rx="1" fill="#00FF6A" opacity="0.7"/>
-  <rect x="320" y="281" width="3" height="13" rx="1" fill="#00FF6A" opacity="0.5"/>
-  <rect x="325" y="276" width="3" height="18" rx="1" fill="#58A6FF" opacity="0.6"/>
-  <rect x="330" y="279" width="3" height="15" rx="1" fill="#58A6FF" opacity="0.6"/>
-  <rect x="335" y="274" width="3" height="20" rx="1" fill="#00FF6A" opacity="0.8"/>
-  <rect x="340" y="283" width="3" height="11" rx="1" fill="#00FF6A" opacity="0.5"/>
-  <rect x="345" y="278" width="3" height="16" rx="1" fill="#F5C400" opacity="0.5"/>
-  <rect x="350" y="280" width="3" height="14" rx="1" fill="#F5C400" opacity="0.4"/>
-  <rect x="355" y="275" width="3" height="19" rx="1" fill="#58A6FF" opacity="0.7"/>
-  <rect x="360" y="282" width="3" height="12" rx="1" fill="#58A6FF" opacity="0.5"/>
-  <rect x="365" y="277" width="3" height="17" rx="1" fill="#00FF6A" opacity="0.7"/>
-  <rect x="370" y="279" width="3" height="15" rx="1" fill="#00FF6A" opacity="0.6"/>
-  <rect x="375" y="279" width="3" height="15" rx="1" fill="#00FF6A" opacity="0.6"/>
-  <rect x="380" y="275" width="3" height="19" rx="1" fill="#00FF6A" opacity="0.7"/>
+  <rect x="590" y="97" width="50" height="17" rx="3" fill="#141618" stroke="#0075A8" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="615" y="108.5" font-size="7.5" fill="#0075A8" text-anchor="middle">Rancher</text>
 
-  <!-- Section label: Highlights -->
-  <text x="20" y="323" font-size="9" fill="#7A808A" letter-spacing="0.08em">// highlights</text>
+  <!-- IaC (y=120) -->
+  <rect x="464" y="120" width="58" height="17" rx="3" fill="#141618" stroke="#7B42F6" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="493" y="131.5" font-size="7.5" fill="#7B42F6" text-anchor="middle">Terraform</text>
 
-  <!-- Highlight items -->
-  <text x="30" y="340" font-size="8.5" fill="#58A6FF">▸</text>
-  <text x="44" y="340" font-size="8.5" fill="#E8E8E8">AWS SDP MySQL RDS · Migration BR→US · EKS/AKS/OKE</text>
+  <rect x="528" y="120" width="50" height="17" rx="3" fill="#141618" stroke="#EE0000" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="553" y="131.5" font-size="7.5" fill="#EE0000" text-anchor="middle">Ansible</text>
 
-  <text x="30" y="356" font-size="8.5" fill="#00FF6A">▸</text>
-  <text x="44" y="356" font-size="8.5" fill="#E8E8E8">FinOps governance · ISO 27001 · RCA ownership</text>
+  <rect x="584" y="120" width="38" height="17" rx="3" fill="#141618" stroke="#4EAA25" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="603" y="131.5" font-size="7.5" fill="#4EAA25" text-anchor="middle">Bash</text>
 
-  <text x="30" y="372" font-size="8.5" fill="#F5C400">▸</text>
-  <text x="44" y="372" font-size="8.5" fill="#E8E8E8">Oracle 11g→19c · Secrets Manager · IRSA/OIDC · KMS</text>
+  <!-- CI/CD (y=143) -->
+  <rect x="464" y="143" width="88" height="17" rx="3" fill="#141618" stroke="#2088FF" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="508" y="154.5" font-size="7.5" fill="#2088FF" text-anchor="middle">GitHub Actions</text>
 
-  <!-- ═══ RIGHT COLUMN ═══ -->
+  <rect x="558" y="143" width="62" height="17" rx="3" fill="#141618" stroke="#FC6D26" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="589" y="154.5" font-size="7.5" fill="#FC6D26" text-anchor="middle">GitLab CI</text>
 
-  <!-- Separator -->
-  <rect x="406" y="50" width="1" height="316" fill="#1E2124"/>
+  <rect x="626" y="143" width="52" height="17" rx="3" fill="#141618" stroke="#EF7B4D" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="652" y="154.5" font-size="7.5" fill="#EF7B4D" text-anchor="middle">ArgoCD</text>
 
-  <!-- Section label: Certifications -->
-  <text x="420" y="65" font-size="9" fill="#7A808A" letter-spacing="0.08em">// certificações</text>
+  <rect x="684" y="143" width="74" height="17" rx="3" fill="#141618" stroke="#0078D7" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="721" y="154.5" font-size="7.5" fill="#0078D7" text-anchor="middle">Azure DevOps</text>
 
-  <!-- Cert cards -->
-  <rect x="420" y="72" width="360" height="40" rx="4" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <rect x="420" y="72" width="3" height="40" rx="1" fill="#FF9900"/>
-  <text x="432" y="86" font-size="8.5" fill="#FF9900" font-weight="600">AWS Solutions Architect – Associate</text>
-  <text x="432" y="101" font-size="7.5" fill="#7A808A">Amazon Web Services</text>
+  <!-- Net / Security (y=166) -->
+  <rect x="464" y="166" width="40" height="17" rx="3" fill="#141618" stroke="#009639" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="484" y="177.5" font-size="7.5" fill="#009639" text-anchor="middle">Nginx</text>
 
-  <rect x="420" y="118" width="360" height="40" rx="4" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <rect x="420" y="118" width="3" height="40" rx="1" fill="#FF9900"/>
-  <text x="432" y="132" font-size="8.5" fill="#FF9900" font-weight="600">AWS Cloud Practitioner</text>
-  <text x="432" y="147" font-size="7.5" fill="#7A808A">Amazon Web Services</text>
+  <rect x="510" y="166" width="68" height="17" rx="3" fill="#141618" stroke="#F38020" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="544" y="177.5" font-size="7.5" fill="#F38020" text-anchor="middle">Cloudflare</text>
 
-  <rect x="420" y="164" width="360" height="40" rx="4" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <rect x="420" y="164" width="3" height="40" rx="1" fill="#F80000"/>
-  <text x="432" y="178" font-size="8.5" fill="#F80000" font-weight="600">OCI Foundations Associate</text>
-  <text x="432" y="193" font-size="7.5" fill="#7A808A">Oracle Cloud Infrastructure</text>
+  <rect x="584" y="166" width="58" height="17" rx="3" fill="#141618" stroke="#EA7E20" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="613" y="177.5" font-size="7.5" fill="#EA7E20" text-anchor="middle">OpenVPN</text>
 
-  <rect x="420" y="210" width="360" height="40" rx="4" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <rect x="420" y="210" width="3" height="40" rx="1" fill="#58A6FF"/>
-  <text x="432" y="224" font-size="8.5" fill="#58A6FF" font-weight="600">Scrum Foundation Professional</text>
-  <text x="432" y="239" font-size="7.5" fill="#7A808A">CertiProf</text>
+  <rect x="648" y="166" width="58" height="17" rx="3" fill="#141618" stroke="#7A808A" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="677" y="177.5" font-size="7.5" fill="#7A808A" text-anchor="middle">Keycloak</text>
 
-  <!-- Section label: Featured -->
-  <text x="420" y="270" font-size="9" fill="#7A808A" letter-spacing="0.08em">// featured project</text>
+  <!-- Observability (y=189) -->
+  <rect x="464" y="189" width="52" height="17" rx="3" fill="#141618" stroke="#F46800" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="490" y="200.5" font-size="7.5" fill="#F46800" text-anchor="middle">Grafana</text>
 
-  <!-- Featured project card -->
-  <rect x="420" y="277" width="360" height="88" rx="4" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <rect x="420" y="277" width="3" height="88" rx="1" fill="#7B42F6"/>
+  <rect x="522" y="189" width="70" height="17" rx="3" fill="#141618" stroke="#E6522C" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="557" y="200.5" font-size="7.5" fill="#E6522C" text-anchor="middle">Prometheus</text>
 
-  <text x="432" y="292" font-size="9" fill="#7B42F6" font-weight="600" letter-spacing="0.04em">aws-terraform-template</text>
+  <rect x="598" y="189" width="48" height="17" rx="3" fill="#141618" stroke="#CC0000" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="622" y="200.5" font-size="7.5" fill="#CC0000" text-anchor="middle">Zabbix</text>
 
-  <text x="432" y="308" font-size="7.5" fill="#8A8F96">Production-ready AWS infra managed with Terraform.</text>
-  <text x="432" y="320" font-size="7.5" fill="#8A8F96">VPC · ECS Fargate · EKS · RDS · ALB · ACM · Route53</text>
-  <text x="432" y="332" font-size="7.5" fill="#8A8F96">CloudTrail · EFS · S3 · Lambda · SES · IAM · KMS</text>
+  <!-- Databases (y=212) -->
+  <rect x="464" y="212" width="44" height="17" rx="3" fill="#141618" stroke="#4479A1" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="486" y="223.5" font-size="7.5" fill="#4479A1" text-anchor="middle">MySQL</text>
 
-  <rect x="432" y="342" width="60" height="14" rx="2" fill="#141618" stroke="#7B42F6" stroke-width="1"/>
-  <text x="462" y="351" font-size="7" fill="#7B42F6" text-anchor="middle" letter-spacing="0.04em">Terraform</text>
+  <rect x="514" y="212" width="48" height="17" rx="3" fill="#141618" stroke="#F80000" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="538" y="223.5" font-size="7.5" fill="#F80000" text-anchor="middle">Oracle</text>
 
-  <rect x="498" y="342" width="54" height="14" rx="2" fill="#141618" stroke="#FF9900" stroke-width="1"/>
-  <text x="525" y="351" font-size="7" fill="#FF9900" text-anchor="middle" letter-spacing="0.04em">AWS &gt;= 5.0</text>
+  <rect x="568" y="212" width="72" height="17" rx="3" fill="#141618" stroke="#4169E1" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="604" y="223.5" font-size="7.5" fill="#4169E1" text-anchor="middle">PostgreSQL</text>
 
-  <rect x="558" y="342" width="48" height="14" rx="2" fill="#141618" stroke="#326CE5" stroke-width="1"/>
-  <text x="582" y="351" font-size="7" fill="#326CE5" text-anchor="middle" letter-spacing="0.04em">EKS 1.35</text>
+  <rect x="646" y="212" width="42" height="17" rx="3" fill="#141618" stroke="#DC382D" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="667" y="223.5" font-size="7.5" fill="#DC382D" text-anchor="middle">Redis</text>
 
-  <rect x="612" y="342" width="56" height="14" rx="2" fill="#141618" stroke="#1E2124" stroke-width="1"/>
-  <text x="640" y="351" font-size="7" fill="#8A8F96" text-anchor="middle" letter-spacing="0.04em">sa-east-1</text>
+  <!-- Dev (y=235) -->
+  <rect x="464" y="235" width="30" height="17" rx="3" fill="#141618" stroke="#00ADD8" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="479" y="246.5" font-size="7.5" fill="#00ADD8" text-anchor="middle">Go</text>
 
-  <!-- Bottom prompt -->
-  <text x="432" y="372" font-size="7.5" fill="#7A808A">📍 Ponta Grossa, PR — Brazil · github.com/wtfbrubs</text>
+  <rect x="500" y="235" width="44" height="17" rx="3" fill="#141618" stroke="#61DAFB" stroke-width="0.75" stroke-opacity="0.55"/>
+  <text x="522" y="246.5" font-size="7.5" fill="#61DAFB" text-anchor="middle">React</text>
+
+  <!-- Divider before certs -->
+  <rect x="464" y="260" width="420" height="1" fill="#252830"/>
+
+  <!-- Certifications -->
+  <text x="464" y="275" font-size="7.5" fill="#3D4555" letter-spacing="0.1em">// certificações</text>
+
+  <!-- Cert 1: AWS SAA -->
+  <rect x="464" y="283" width="416" height="30" rx="4" fill="#141618" stroke="#252830" stroke-width="1"/>
+  <rect x="464" y="283" width="3" height="30" rx="1" fill="#FF9900"/>
+  <text x="476" y="296" font-size="8" fill="#FF9900" font-weight="600">AWS Solutions Architect – Associate</text>
+  <text x="476" y="307" font-size="6.5" fill="#5A6072">Amazon Web Services</text>
+
+  <!-- Cert 2: AWS CCP -->
+  <rect x="464" y="319" width="416" height="30" rx="4" fill="#141618" stroke="#252830" stroke-width="1"/>
+  <rect x="464" y="319" width="3" height="30" rx="1" fill="#FF9900"/>
+  <text x="476" y="332" font-size="8" fill="#FF9900" font-weight="600">AWS Cloud Practitioner</text>
+  <text x="476" y="343" font-size="6.5" fill="#5A6072">Amazon Web Services</text>
+
+  <!-- Cert 3: OCI Architect -->
+  <rect x="464" y="355" width="202" height="30" rx="4" fill="#141618" stroke="#252830" stroke-width="1"/>
+  <rect x="464" y="355" width="3" height="30" rx="1" fill="#F80000"/>
+  <text x="476" y="368" font-size="8" fill="#F80000" font-weight="600">OCI Architect Associate</text>
+  <text x="476" y="379" font-size="6.5" fill="#5A6072">Oracle Cloud Infrastructure</text>
+
+  <!-- Cert 4: Scrum -->
+  <rect x="672" y="355" width="208" height="30" rx="4" fill="#141618" stroke="#252830" stroke-width="1"/>
+  <rect x="672" y="355" width="3" height="30" rx="1" fill="#00897B"/>
+  <text x="684" y="368" font-size="8" fill="#00897B" font-weight="600">Scrum Foundation (SFPC)</text>
+  <text x="684" y="379" font-size="6.5" fill="#5A6072">CertiProf</text>
 
 </svg>
